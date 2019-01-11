@@ -1,0 +1,17 @@
+Change in Deafault.aspx.cs
+        submitButton_Click(object sender, EventArgs e)
+To
+        SubmitButton_Click(object sender, EventArgs e)
+
+Change in default.aspx
+        Upload image: <asp:FileUpload ID="upload" runat="server" /> <asp:Button ID="submitButton" runat="server" Text="Submit" OnClick="submitButton_Click" />
+to
+        Upload image: <asp:FileUpload ID="upload" runat="server" /> <asp:Button ID="submitButton" runat="server" Text="Submit" OnClick="SubmitButton_Click" />
+
+Change in MicrosoftWindowsAzure.targets ??????????????????????????????????????????????????????????? IGNORE
+        Condition=" '$(RoleTargetFrameworkMonikerIsValid)' == 'True' And '%(TargetOSFamily.Identity)' &gt; = '3' And '$(RoleTargetFrameWorkIs35)' == 'True' ">
+to
+        Condition=" '$(RoleTargetFrameworkMonikerIsValid)' == 'True' And '%(TargetOSFamily.Identity)' &gt; '3' And '$(RoleTargetFrameWorkIs35)' == 'True' ">
+
+Add to ServiceConfiguration.cscfg line 2
+        osFamily="3" osVersion="*"

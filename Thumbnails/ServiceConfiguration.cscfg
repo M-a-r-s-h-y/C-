@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="Thumbnails" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="3" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="Thumbnails_WorkerRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+       <!-- Add your storage account information and uncomment this to target Windows Azure storage.
+        <Setting name="DataConnectionString" value="DefaultEndpointsProtocol=https;AccountName=YourAccountName;AccountKey=YourAccountKey" />
+        <Setting name="DiagnosticsConnectionString" value="DefaultEndpointsProtocol=https;AccountName=DiagnosticsAccountName;AccountKey=DiagnosticsAccountKey" />
+       <Setting name="DataConnectionString" value="UseDevelopmentStorage=true" />
+       -->
+       <Setting name="DataConnectionString" value="DefaultEndpointsProtocol=https; AccountName=marshy3636; AccountKey=Pas123Wor456" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+    </ConfigurationSettings>
+  </Role>
+  <Role name="Thumbnails_WebRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <!-- Add your storage account information and uncomment this to target Windows Azure storage.
+        <Setting name="DataConnectionString" value="DefaultEndpointsProtocol=https;AccountName=YourAccountName;AccountKey=YourAccountKey" />
+        <Setting name="DiagnosticsConnectionString" value="DefaultEndpointsProtocol=https;AccountName=DiagnosticsAccountName;AccountKey=DiagnosticsAccountKey" />
+       <Setting name="DataConnectionString" value="UseDevelopmentStorage=true" />
+      -->
+       <Setting name="DataConnectionString" value="DefaultEndpointsProtocol=https;AccountName=marshy3636; AccountKey=Pas123Wor456" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>
